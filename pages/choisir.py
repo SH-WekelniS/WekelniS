@@ -45,6 +45,14 @@ def set_background_and_style(image_file):
             border-radius: 10px;
             width: 100%;
             margin: 10px 0;
+            background-color: #0056b3 !important;
+            color: white !important;
+            border: none;
+            transition: background-color 0.3s ease;
+        }}
+        .stButton > button:hover {{
+            background-color: #1a75ff !important;
+            color: white !important;
         }}
         </style>
         """
@@ -155,9 +163,9 @@ for patient in onto.Patient.instances():
                         </div>
                         """, unsafe_allow_html=True)
 
-                        col1, col2 = st.columns(2)
+                        col1, _, col3 = st.columns([1, 6, 1])
                         with col1:
-                            if st.button("🤖 Recommandation Automatique", key="btn_llm"):
+                            if st.button("🤖 Recommandation automatique", key="btn_llm"):
                                 if mews_value is not None and mews_value >= 5:
                                     st.error("🔴 Votre état est critique. Vous ne pouvez pas choisir un repas à ce moment-là.")
                                 else:
@@ -165,8 +173,8 @@ for patient in onto.Patient.instances():
                                     st.session_state["patient_id"] = patient.name
                                     st.switch_page("pages/LLM.py")
 
-                        with col2:
-                            if st.button("📝 Choix Manuel", key="btn_choisir"):
+                        with col3:
+                            if st.button("📝 Choix manuel", key="btn_choisir"):
                                 if mews_value is not None and mews_value >= 5:
                                     st.error("🔴 Votre état est critique. Vous ne pouvez pas choisir un repas à ce moment-là.")
                                 else:
