@@ -133,7 +133,7 @@ for patient in onto.Patient.instances():
 
                     if show_vitals:
                         try:
-                            df_vitals = pd.read_csv("C:/UsersNexTech/OneDrive/WekelniS/signaux_vitaux_patients2.csv")
+                            df_vitals = pd.read_csv("signaux_vitaux_patients2.csv")
                             row = df_vitals[df_vitals["aEmail"] == email_input]
 
                             if not row.empty:
