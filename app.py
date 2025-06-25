@@ -116,7 +116,7 @@ def set_background_and_style(image_file):
     st.markdown(css, unsafe_allow_html=True)
 
 # تطبيق التنسيق
-set_background_and_style("images/1.jpg")
+set_background_and_style("Images/1.jpg")
 
 # --- المحتوى الرئيسي ---
 st.markdown("""
