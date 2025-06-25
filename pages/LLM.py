@@ -39,7 +39,7 @@ def set_background(image_file):
         unsafe_allow_html=True
     )
 
-set_background("images/3.jpg")
+set_background("Images/3.jpg")
 
 # عرض عنوان WekelniS
 st.markdown("""
@@ -51,7 +51,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # تحميل الأنطولوجيا
-onto_path = "C:/Users/NexTech/Desktop/codeM/ontology9-singaux4.owl"
+onto_path = "ontology9-singaux4.owl"
 onto = get_ontology(onto_path).load()
 
 st.title("🍽️ Générateur de repas personnalisés")
