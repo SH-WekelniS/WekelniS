@@ -38,28 +38,13 @@ def set_background_and_style(image_file):
             text-align: center;
             margin-top: 40px;
         }}
-        .stButton button {{
-            font-weight: bold !important;
-            font-size: 14px !important;
-            padding: 8px 24px !important;
-            border-radius: 8px !important;
-            border: none !important;
-            cursor: pointer !important;
-            transition: background-color 0.3s ease !important;
-        }}
-        .stButton button:nth-of-type(1) {{
-            background-color: #007BFF !important;
-            color: white !important;
-        }}
-        .stButton button:nth-of-type(1):hover {{
-            background-color: #0056b3 !important;
-        }}
-        .stButton button:nth-of-type(2) {{
-            background-color: #28a745 !important;
-            color: white !important;
-        }}
-        .stButton button:nth-of-type(2):hover {{
-            background-color: #19692c !important;
+        .stButton > button {{
+            font-weight: bold;
+            font-size: 16px;
+            padding: 12px 40px;
+            border-radius: 10px;
+            width: 100%;
+            margin: 10px 0;
         }}
         </style>
         """
@@ -68,6 +53,7 @@ def set_background_and_style(image_file):
         st.warning("⚠️ Impossible de charger l’image de fond. Vérifiez le chemin du fichier.")
 
 set_background_and_style("Images/3.jpg")
+
 st.markdown("""
     <div style="text-align: center; margin-top: -60px; margin-bottom: 20px;">
         <h1 style="font-size: 58px; font-family: 'Poppins', sans-serif; font-weight: 600;">WekelniS 💗🩺</h1>
@@ -169,9 +155,9 @@ for patient in onto.Patient.instances():
                         </div>
                         """, unsafe_allow_html=True)
 
-                        col1, _, col3 = st.columns([1, 6, 1])
+                        col1, col2 = st.columns(2)
                         with col1:
-                            if st.button("recommandation automatique", key="btn_llm"):
+                            if st.button("🤖 Recommandation Automatique", key="btn_llm"):
                                 if mews_value is not None and mews_value >= 5:
                                     st.error("🔴 Votre état est critique. Vous ne pouvez pas choisir un repas à ce moment-là.")
                                 else:
@@ -179,8 +165,8 @@ for patient in onto.Patient.instances():
                                     st.session_state["patient_id"] = patient.name
                                     st.switch_page("pages/LLM.py")
 
-                        with col3:
-                            if st.button("choix manuel ", key="btn_choisir"):
+                        with col2:
+                            if st.button("📝 Choix Manuel", key="btn_choisir"):
                                 if mews_value is not None and mews_value >= 5:
                                     st.error("🔴 Votre état est critique. Vous ne pouvez pas choisir un repas à ce moment-là.")
                                 else:
