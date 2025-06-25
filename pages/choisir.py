@@ -171,7 +171,7 @@ for patient in onto.Patient.instances():
 
                         col1, _, col3 = st.columns([1, 6, 1])
                         with col1:
-                            if st.button("LLM", key="btn_llm"):
+                            if st.button("recommandation automatique", key="btn_llm"):
                                 if mews_value is not None and mews_value >= 5:
                                     st.error("🔴 Votre état est critique. Vous ne pouvez pas choisir un repas à ce moment-là.")
                                 else:
@@ -180,7 +180,7 @@ for patient in onto.Patient.instances():
                                     st.switch_page("pages/LLM.py")
 
                         with col3:
-                            if st.button("Choisir", key="btn_choisir"):
+                            if st.button("choix manuel ", key="btn_choisir"):
                                 if mews_value is not None and mews_value >= 5:
                                     st.error("🔴 Votre état est critique. Vous ne pouvez pas choisir un repas à ce moment-là.")
                                 else:
