@@ -151,8 +151,8 @@ for patient in onto.Patient.instances():
                         <div class="box-container">
                             <h3>🥗 Veuillez choisir la méthode que vous souhaitez utiliser pour recevoir vos recommandations alimentaires :</h3>
                             <p style="font-size:16px; margin-top:10px;">
-                            👉 Soit vous sélectionnez vous-même vos repas (Choisir),<br>
-                            👉 Soit vous laissez notre système intelligent (LLM) le faire pour vous.
+                            👉 Soit vous sélectionnez vous-même vos repas (Choix Manuel),<br>
+                            👉 Soit vous laissez notre système intelligent (Recommandation Automatique) le faire pour vous.
                             </p>
                         </div>
                         """, unsafe_allow_html=True)
