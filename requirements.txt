@@ -1,3 +1,8 @@
 streamlit
 pandas
 owlready2
+base64
+bcrypt
+re
+json
+subprocess
