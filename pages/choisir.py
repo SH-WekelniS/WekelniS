@@ -67,7 +67,7 @@ def set_background_and_style(image_file):
     except FileNotFoundError:
         st.warning("⚠️ Impossible de charger l’image de fond. Vérifiez le chemin du fichier.")
 
-set_background_and_style("images/3.jpg")
+set_background_and_style("Images/3.jpg")
 st.markdown("""
     <div style="text-align: center; margin-top: -60px; margin-bottom: 20px;">
         <h1 style="font-size: 58px; font-family: 'Poppins', sans-serif; font-weight: 600;">WekelniS 💗🩺</h1>
@@ -84,7 +84,7 @@ password_input = st.session_state['password']
 
 # تحميل الأنطولوجيا
 try:
-    onto = get_ontology("C:/Users/NexTech/Desktop/codeM/ontology9-singaux4.owl").load()
+    onto = get_ontology("ontology9-singaux4.owl").load()
 except Exception as e:
     st.error(f"❌ Erreur lors du chargement de l'ontologie : {e}")
     st.stop()
@@ -133,7 +133,7 @@ for patient in onto.Patient.instances():
 
                     if show_vitals:
                         try:
-                            df_vitals = pd.read_csv("C:/Users/NexTech/Desktop/codeM/signaux_vitaux_patients2.csv")
+                            df_vitals = pd.read_csv("C:/UsersNexTech/OneDrive/WekelniS/signaux_vitaux_patients2.csv")
                             row = df_vitals[df_vitals["aEmail"] == email_input]
 
                             if not row.empty:

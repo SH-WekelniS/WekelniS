@@ -67,7 +67,7 @@ def set_background_and_style(image_file):
         st.warning("⚠️ Impossible de charger l’image de fond. Vérifiez le chemin du fichier.")
 
 # تعيين الخلفية
-set_background_and_style("images/3.jpg")
+set_background_and_style("Images/3.jpg")
 
 # التحقق من بيانات الجلسة
 if 'email' not in st.session_state or 'password' not in st.session_state:
@@ -79,7 +79,7 @@ password_input = st.session_state['password']
 
 # تحميل الأنطولوجيا
 try:
-    onto = get_ontology("C:/Users/NexTech/Desktop/codeM/ontology9-singaux1_final.owl").load()
+    onto = get_ontology("ontology9-singaux4.owl").load()
 except Exception as e:
     st.error(f"❌ Erreur lors du chargement de l'ontologie : {e}")
     st.stop()

@@ -72,7 +72,7 @@ def set_background_and_style(image_file):
     st.markdown(css, unsafe_allow_html=True)
 
 # تعيين الخلفية
-set_background_and_style("images/image22.jpg")
+set_background_and_style("Images/image22.jpg")
 
 st.markdown("""
     <div style="text-align: center; margin-top: -60px; margin-bottom: 20px;">
@@ -81,7 +81,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # تحميل الأنطولوجيا
-onto = get_ontology("C:/Users/NexTech/Desktop/codeM/ontology9-singaux4.owl").load()
+onto = get_ontology("ontology9-singaux4.owl").load()
 
 def get_first_value(prop):
     if isinstance(prop, list) and len(prop) > 0:

@@ -68,7 +68,7 @@ def set_background_and_style(image_file):
     st.markdown(css, unsafe_allow_html=True)
 
 # تطبيق الخلفية والتنسيق
-set_background_and_style("images/1.jpg")
+set_background_and_style("Images/1.jpg")
 
 # محاذاة النموذج في الوسط
 left_col, center_col, right_col = st.columns([1, 2, 1])
@@ -102,7 +102,7 @@ with center_col:
         # التحقق من إدخال كافة البيانات
         if nom and email and motdepasse and sex and age > 0 and poids > 0 and taille > 0 and maladie:
             with st.spinner("S'inscrire..."):
-                onto = get_ontology("C:/Users/NexTech/Desktop/codeM/ontology9-singaux4.owl").load()
+                onto = get_ontology("ontology9-singaux4.owl").load()
 
                 Patient = onto.Patient
                 MaladieChroniqueC = onto.MaladieChronique

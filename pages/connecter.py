@@ -146,7 +146,7 @@ with center_col:
         if st.button("Se connecter"):
             if email_input and password_input:
                 with st.spinner("Vérification..."):
-                    onto = get_ontology("C:/UsersNexTech/OneDrive/WekelniS/ontology9-singaux4.owl").load()
+                    onto = get_ontology("ontology9-singaux4.owl").load()
                     found = False
 
                     for patient in onto.Patient.instances():
