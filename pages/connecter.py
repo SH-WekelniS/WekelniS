@@ -113,7 +113,7 @@ def set_background_and_style(image_file):
     st.markdown(css, unsafe_allow_html=True)
 
 # تعيين الخلفية
-set_background_and_style("images/1.jpg")
+set_background_and_style("Images/1.jpg")
 
 # واجهة التصميم
 left_col, center_col, right_col = st.columns([1, 2, 1])
@@ -146,7 +146,7 @@ with center_col:
         if st.button("Se connecter"):
             if email_input and password_input:
                 with st.spinner("Vérification..."):
-                    onto = get_ontology("C:/Users/NexTech/Desktop/codeM/ontology9-singaux4.owl").load()
+                    onto = get_ontology("C:/UsersNexTech/OneDrive/WekelniS/ontology9-singaux4.owl").load()
                     found = False
 
                     for patient in onto.Patient.instances():
