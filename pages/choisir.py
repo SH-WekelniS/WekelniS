@@ -97,7 +97,7 @@ for patient in onto.Patient.instances():
                 if bcrypt.checkpw(password_input.encode('utf-8'), patient_password.encode('utf-8')):
                     found = True
 
-                    nom_patient = get_first_value(patient.Name) if hasattr(patient, "Name") else "Inconnu"
+                    nom_patient = get_first_value(patient.aNom) if hasattr(patient, "aNom") else "Inconnu"
                     calories = get_first_value(patient.CaloriesP) if hasattr(patient, "CaloriesP") else "N/A"
                     mews = get_first_value(patient.aMEWS) if hasattr(patient, "aMEWS") else "N/A"
 
